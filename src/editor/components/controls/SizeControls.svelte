@@ -28,7 +28,7 @@
 		if (s === 'narrow') {
 			height.set({
 				show: true,
-				min: 350,
+				min: 320,
 				max: 650,
 				def: 450,
 				value: 450,
