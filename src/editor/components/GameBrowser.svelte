@@ -57,7 +57,7 @@
 					hitsPerPage: 15,
 					maxValuesPerFacet: 100,
 
-					facetFilters: '[["department:board-games","department:card-games","department:dice-games","department:rpgs","department:wargames"]]',
+					facetFilters: '[["department:board-games","department:card-games","department:dice-games","department:rpgs","department:wargames","department:tarot"]]',
 				}, ''),
 			}),
 		})
