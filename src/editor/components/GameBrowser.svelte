@@ -55,7 +55,9 @@
 				params: qs.stringify({
 					query: q,
 					hitsPerPage: 15,
-					facetFilters: ['department:board-games'],
+					maxValuesPerFacet: 100,
+
+					facetFilters: '[["department:board-games","department:card-games","department:dice-games","department:rpgs","department:wargames"]]',
 				}, ''),
 			}),
 		})
