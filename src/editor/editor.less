@@ -1,0 +1,114 @@
+input[type=range] {
+	@track-height: 4px;
+	@track-background: hsl(200, 15%, 85%);
+
+	@thumb-focused: hsl(200, 60%, 50%);
+	@thumb-border: 3px;
+	@thumb-size: 14px;
+
+	-webkit-appearance: none;
+
+	width: 100%;
+	margin: 10px 0;
+	padding: 0;
+
+	border: none;
+
+	&:focus {
+		outline: none;
+	}
+
+	/* Track */
+	&::-webkit-slider-runnable-track {
+		width: 100%;
+		height: @track-height * 3;
+		margin: 4px 0;
+
+		background: @track-background;
+		border: @track-height solid white;
+		border-radius: @track-height * 3;
+
+		cursor: pointer;
+	}
+	&::-moz-range-track {
+		width: 100%;
+		height: @track-height;
+
+		background: @track-background;
+		border: @track-height solid white;
+		border-radius: @track-height * 3;
+
+		cursor: pointer;
+	}
+	&::-ms-track {
+		width: 100%;
+		height: @track-height;
+		margin: -4px 0;
+		cursor: pointer;
+		background: transparent;
+		color: transparent;
+		border-color: transparent;
+		border-width: (@thumb-size / 2) 0;
+	}
+	&::-ms-fill-lower {
+		background: @track-background;
+		border: none;
+		border-radius: @track-height / 2;
+	}
+	&::-ms-fill-upper {
+		background: @track-background;
+		border: none;
+		border-radius: @track-height / 2;
+	}
+
+	/* Thumb */
+	&::-webkit-slider-thumb {
+		-webkit-appearance: none;
+		box-sizing: content-box;
+
+		width: 12px;
+		height: 12px;
+		margin-top: -7px;
+
+		border-radius: 50%;
+		border: 3px solid white;
+		background: @track-background;
+
+		cursor: pointer;
+	}
+	&::-moz-range-thumb {
+		width: 14px;
+		height: 14px;
+
+		border-radius: 50%;
+		border: @thumb-border solid white;
+		background: @track-background;
+
+		cursor: pointer;
+	}
+	&::-ms-thumb {
+		width: 12px;
+		height: 12px;
+		margin-top: 0;
+
+		border-radius: 50%;
+		border: 3px solid white;
+		background: @track-background;
+
+		cursor: pointer;
+	}
+
+	/* Focus */
+	&:focus, &:hover {
+		&::-webkit-slider-thumb {
+			background: @thumb-focused;
+		}
+		&::-moz-range-thumb {
+			background: @thumb-focused;
+		}
+		&::-ms-thumb {
+			background: @thumb-focused;
+		}
+	}
+}
+
