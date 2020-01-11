@@ -3,6 +3,7 @@
 	export let value;
 	export let max;
 	export let min;
+	export let step;
 	export let valueLabelFn = val => val;
 
 	$: valueLabel = valueLabelFn(value);
@@ -10,7 +11,7 @@
 
 <label class="slider">
 	<span class="slider__label">{ label }</span>
-	<input class="slider__input" type="range" min={ min } max={ max } bind:value>
+	<input class="slider__input" type="range" min={ min } max={ max } step={ step } bind:value>
 	<span class="slider__value">{ valueLabel }</span>
 </label>
 

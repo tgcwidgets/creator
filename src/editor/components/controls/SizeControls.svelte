@@ -91,8 +91,9 @@
 	{#if $width.show}
 		<Slider
 				label="Width"
+				step="5"
 				min={ $width.min }
-				max={ $width.max + 1 }
+				max={ $width.max + 5 }
 				valueLabelFn={ valueLabelFn($width.min, $width.max) }
 				bind:value={ $width.value } />
 	{/if}
@@ -100,8 +101,9 @@
 	{#if $height.show}
 		<Slider
 				label="Height"
+				step="5"
 				min={ $height.min }
-				max={ $height.max + 1 }
+				max={ $height.max + 5 }
 				valueLabelFn={ valueLabelFn($height.min, $height.max) }
 				bind:value={ $height.value } />
 	{/if}
