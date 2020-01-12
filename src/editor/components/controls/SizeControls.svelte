@@ -44,7 +44,7 @@
 			});
 			width.set({
 				show: true,
-				min: 500,
+				min: 450,
 				max: 1000,
 				def: 720,
 				value: 720,
@@ -53,7 +53,7 @@
 			height.set({ show: false });
 			width.set({
 				show: true,
-				min: 500,
+				min: 450,
 				max: 1000,
 				def: 720,
 				value: 720,

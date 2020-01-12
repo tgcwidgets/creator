@@ -17,13 +17,14 @@
 		'FCA67274-CF03-11E7-803E-0FD5461459D7', // weevils
 		'20E621F0-6B8C-11E8-BD59-2CBC75A431D5', // rainbow rabbits
 		'FB063FC6-80F2-11E2-809F-0BBB2172D019', // host
+		'3D8A129E-5975-11E9-AAC4-A00F7F23BFD3', // auriferous
 	];
 
 	const SIZES = ['tiny', 'narrow', 'large', 'wide'];
 	const THEMES = ['light', 'light-rounded', 'dark', 'dark-rounded'];
 
 	const pickRandom = arr => arr[Math.floor(Math.random() * (arr.length - 1))];
-	const randomRange = (min, max) => max;//min + Math.ceil(Math.random() * (max - min));
+	const randomRange = (min, max) => min + Math.ceil(Math.random() * (max - min));
 	const randomBool = threshold => Math.random() > threshold ? 1 : 0;
 
 	function generate() {
@@ -35,12 +36,12 @@
 			height = '205px';
 		} else if (size === 'narrow') {
 			width = '210px';
-			height = randomRange(320, 450) + 'px';
+			height = randomRange(320, 420) + 'px';
 		} else if (size === 'large') {
-			width = '500px';
-			height = randomRange(260, 450) + 'px';
+			width = randomRange(450, 720) + 'px';
+			height = randomRange(260, 420) + 'px';
 		} else if (size === 'wide') {
-			width = '500px';
+			width = randomRange(450, 720) + 'px';
 			height = '155px';
 		}
 

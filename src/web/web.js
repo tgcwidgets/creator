@@ -26,7 +26,7 @@ function createWidget() {
 			widgetContainer.classList.remove('widget-container--old');
 			widgetContainer.classList.add('widget-container--new');
 		}, 200);
-	}, first ? 2000 : 5000);
+	}, first ? 2000 : 4000);
 	first = false;
 
 	return widget;

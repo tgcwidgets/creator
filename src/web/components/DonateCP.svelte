@@ -14,6 +14,8 @@
 		isOpen = true;
 	}
 
+	let redirectUri = `${ window.location.protocol }//${ window.location.host }/thanks`;
+
 </script>
 
 <a class="button-row__button" href="#" on:click|preventDefault={ open }>
@@ -25,7 +27,6 @@
 	<form class="donate-cp__inner" method="post" action="https://www.thegamecrafter.com/account/spendcp">
 		<h2 class="donate-cp__title">Donate</h2>
 
-		<input type="hidden" name="redirect_uri" value="https://www.tgcwidgets.com/thanks.html">
 
 		<label>
 			<span>How many crafter points do you want to donate?</span>
@@ -37,6 +38,7 @@
 		<input type="hidden" name="reason" value="donation to Wouter (aka Ikke)">
 		<input type="hidden" name="transaction_id" value="thanks!">
 		<input type="hidden" name="api_key_id" value="8596C87C-EAF9-11E5-B856-E780FCC30529">
+		<input type="hidden" name="redirect_uri" value={ redirectUri }>
 
 		<input class="donate-cp__button" type="submit" value={ `Donate ${ amount } crafter points` }>
 		<input class="donate-cp__button donate-cp__button--alt" type="button" on:click|preventDefault={ close } value="Cancel">
