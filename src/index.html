@@ -4,10 +4,78 @@
 	<title>TGC Widgets</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="description" content="Embeddable widgets for The Game Crafter">
 
 	<link rel="stylesheet" href="shared/global.css">
 </head>
 <body>
-	<a href="/editor">Go to the editor</a>
+	<header class="header">
+		<div class="header__text">
+			<h1 class="header__title">TGC Widget Creator</h1>
+			<p class="header__slogan">Embeddable widgets for The Game Crafter</p>
+
+			<a class="header__button" href="/editor">Launch editor</a>
+		</div>
+
+		<div class="header__widget">
+			<div id="widget-container" class="widget-container"></div>
+		</div>
+	</header>
+
+	<main class="page">
+
+		<section class="page__content">
+			<div class="container">
+				<h2>Smart Widgets</h2>
+				<p>Create embeddable widgets for your The Game Crafter games. These widgets feature your shop image, the title of the game, and a large 'buy now' button that links directly to TGC. Just select your game, customise your widget, and copy the code to your website or blog.</p>
+
+				<p>The widgets are built on top of the API, which means that if you change anything in your game settings, the information in your widget will also be automatically updated. You don't have to generate a new widget every time.</p>
+			</div>
+		</section>
+
+		<section class="page__content page__content--alt">
+			<div class="container">
+				<h2>Help</h2>
+				<p>If you have a problem with the widget creator, you want to suggest a new feature, or you just want to say hi &mdash; send me a message on <a href="https://twitter.com/woubuc" target="_blank">twitter</a> or open an issue on <a href="https://github.com/tgcwidgets/creator/issues" target="_blank">github</a>.</p>
+			</div>
+		</section>
+
+		<section class="page__content">
+			<div class="container">
+				<a name="donate"></a>
+				<h2>Donate</h2>
+				<p>I'm a programmer and an aspiring game designer. I made this site free to use for anyone, even though it costs me money to keep it running. If you like the work I'm doing, I would very much appreciate a donation through one of these means.</p>
+
+				<div class="button-row">
+					<span id="donate-crafter-points"></span>
+					<a class="button-row__button" href="https://liberapay.com/woubuc/" target="_blank">
+						<span>support me</span>
+						<span><strong>liberapay</strong></span>
+					</a>
+					<a class="button-row__button" href="https://www.ko-fi.com/woubuc" target="_blank">
+						<span>buy me a coffee</span>
+						<span><strong>ko-fi</strong></span>
+					</a>
+					<a class="button-row__button" href="https://paypal.me/woubuc" target="_blank">
+						<span>donate</span>
+						<span><strong>paypal</strong></span>
+					</a>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer class="page__content page__content--alt">
+		<div class="container">
+			<ul class="footer">
+				<li>made by <a href="https://twitter.com/woubuc" target="_blank">@woubuc</a></li>
+				<li>not affiliated with thegamecrafter.com</li>
+				<li><a href="https://github.com/tgcwidgets/creator" target="_blank">source</a></li>
+			</ul>
+		</div>
+	</footer>
+
+
+	<script src="web/web.js"></script>
 </body>
 </html>

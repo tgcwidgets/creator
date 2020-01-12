@@ -1,5 +1,5 @@
 <script>
-	export let label;
+	export let label = '';
 	export let value;
 	export let max;
 	export let min;
@@ -10,7 +10,10 @@
 </script>
 
 <label class="slider">
-	<span class="slider__label">{ label }</span>
+	{#if label.length > 0 }
+		<span class="input__label">{ label }</span>
+	{/if}
+
 	<input class="slider__input" type="range" min={ min } max={ max } step={ step } bind:value>
 	<span class="slider__value">{ valueLabel }</span>
 </label>

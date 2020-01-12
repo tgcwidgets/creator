@@ -1,12 +1,17 @@
 <script>
-	export let label;
+	export let label = '';
+	export let name = '';
 	export let value;
 	export let disabled = false;
+	export let numeric = false;
 </script>
 
 <label class="input" class:input--disabled={ disabled }>
-	<span class="input__label">{ label }</span>
-	<input class="input__input" type="text" { value } { disabled } on:input>
+	{#if label.length > 0 }
+		<span class="input__label">{ label }</span>
+	{/if}
+
+	<input class="input__input" name={ name } type={ numeric ? 'number' : 'text' } { value } { disabled } on:input>
 </label>
 
 
@@ -14,6 +19,16 @@
 .input {
 	display: block;
 	padding: 10px 20px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+input[type=number] {
+	-moz-appearance:textfield;
 }
 
 .input__label {

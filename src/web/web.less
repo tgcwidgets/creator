@@ -1,0 +1,170 @@
+body {
+	background: white;
+	color: hsl(230, 15%, 30%);
+}
+
+.container {
+	width: 100%;
+	max-width: 720px;
+	margin: auto;
+}
+
+.header {
+	padding: 40px;
+	text-align: center;
+
+	color: white;
+	background: hsl(215, 80%, 55%);
+	background: linear-gradient(20deg, hsl(230, 55%, 55%), hsl(200, 75%, 60%));
+	box-shadow: inset 0 -2px 4px rgba(black, 0.06);
+}
+
+.header__text {
+
+}
+
+.header__title {
+	font-size: 2rem;
+	font-weight: 800;
+}
+.header__slogan {
+	padding: 40px 0;
+	font-size: 1.2rem;
+	font-weight: 600;
+}
+.header__button {
+	display: inline-block;
+	padding: 10px 16px;
+
+	color: hsl(215, 80%, 55%);
+	background: white;
+	border-radius: 10px;
+	box-shadow: 0 2px 6px -1px rgba(black, 0.1);
+
+	font-size: 1.1rem;
+	font-weight: 800;
+	text-decoration: none;
+
+	transition: all 80ms ease-out;
+
+	&:hover {
+		background: hsl(215, 70%, 55%);
+		color: white;
+		box-shadow: none;
+	}
+}
+
+.header__widget {
+	width: 100%;
+	height: 500px;
+	margin-bottom: -250px;
+
+	padding: 0 20px;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.widget-container {
+	opacity: 0;
+	transform: translateX(0);
+	transition: all 200ms ease-out;
+}
+.widget-container--visible {
+	opacity: 1;
+}
+.widget-container--old {
+	transform: translateX(-15px);
+}
+.widget-container--new {
+	transform: translateX(15px);
+	transition: none;
+}
+
+
+.page {
+	padding-top: 150px;
+}
+
+.page__content {
+	padding: 60px 40px;
+
+	p {
+		padding-bottom: 20px;
+	}
+
+	a {
+		color: hsl(230, 15%, 30%);
+	}
+	a:hover {
+		color: hsl(230, 15%, 20%);
+		text-decoration: none;
+	}
+}
+
+.page__content--alt {
+	background: linear-gradient(20deg, hsl(230, 55%, 55%), hsl(210, 55%, 55%));
+	color: white;
+
+	a {
+		color: white;
+	}
+	a:hover {
+		color: hsl(230, 60%, 85%);
+		text-decoration: none;
+	}
+}
+
+
+.button-row__button {
+	display: inline-block;
+	padding: 6px 14px 8px;
+	margin-right: 6px;
+
+	border-radius: 6px;
+	background: hsl(220, 55%, 55%);
+	color: white;
+
+	line-height: 1rem;
+	font-size: 0.9rem;
+	text-decoration: none;
+	text-align: center;
+
+	&:hover {
+		background: hsl(220, 65%, 65%);
+	}
+
+	span {
+		display: block;
+		color: hsl(220, 15%, 96%);
+	}
+
+	strong {
+		font-weight: 800;
+		color: white;
+	}
+}
+
+
+.footer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	list-style: none;
+
+	font-size: 0.8rem;
+	color: white;
+}
+.footer li::after {
+	display: inline-block;
+	content: '';
+	width: 4px;
+	height: 4px;
+	margin: 0 6px 1px;
+	border-radius: 50%;
+	background: hsl(220, 25%, 90%);
+}
+.footer li:last-child::after {
+	display: none;
+}
